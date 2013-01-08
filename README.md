@@ -22,9 +22,9 @@ Let's say you define a module like so:
 
     var TestModel = mongoose.model('Test', TestSchema);
 
-and an Express server defined like so:
+and an [Express](http://expressjs.com/) server defined like so:
 
-    app = express()
+    app = express();
     app.configure(function () {
       app.use(express.bodyParser())
       app.use(app.router)
@@ -37,13 +37,15 @@ Lastly, set up the serving routes for your models, connect to the database, and 
 
     mongooseApi.serveModels(app);
     
-    var db = mongoose.connection
+    var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function() {
       http.createServer(app).listen(app.get('port'), function() {
         console.log("Express server listening on port " + app.get('port'));
       });
     });
+
+Note that mongoose-api can and will automatically discover and serve routes for all your Mongoose models by default.
 
 ## REST API examples
 
