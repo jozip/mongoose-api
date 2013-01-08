@@ -1,22 +1,27 @@
 {
   "name": "mongoose-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automatic REST API generation using Mongoose and Express",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+  	"prepublish": "cake build",
     "test": "node_modules/mocha/bin/mocha --compilers coffee:coffee-script test"
   },
   "devDependencies": {
-    "mongoose": "~3.5.3",
-    "express": "~3.0.6",
+    "coffee-script": "~1.4.0",
     "expect.js": "~0.2.0",
+    "express": "~3.0.6",
     "mocha": "~1.7.4",
-    "coffee-script": "~1.4.0"
+    "mongoose": "~3.5.3",
+    "muffin": ">= 0.6.2"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cha0s/mongoose-api.git"
+  },
   "keywords": [
     "Mongoose",
     "MongoDB",
