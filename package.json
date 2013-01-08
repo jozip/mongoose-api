@@ -4,7 +4,8 @@
   "description": "Automatic REST API generation using Mongoose and Express",
   "main": "lib/index.js",
   "directories": {
-    "test": "test"
+    "lib": "./lib",
+    "test": "./test"
   },
   "scripts": {
   	"prepublish": "cake build",

@@ -1,9 +1,15 @@
 # mongoose-api
 
-## Automatic REST API generation using Mongoose and Express
+Automatic REST API generation using Mongoose and Express
 
 I had trouble finding a good solution for serving my [Mongoose](http://mongoosejs.com/) models as a REST API.
 This module can discover and serve your models automatically, or you can serve one or more of them manually.
+
+## Install
+
+    npm install mongoose-api
+    
+## Usage
 
 First, our definitions:
 
